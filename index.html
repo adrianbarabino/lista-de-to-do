@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<title>Aprendiendo con Mejorando.la</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<style>
+	body{
+		font-size:16px;
+	}
+	.row {
+		background: #eee;
+		padding: 0.5em 1em;
+	}
+	label{
+		font-size:16px;
+		color:#04c;
+	}
+	.tildado{
+		text-decoration: line-through;
+		color:#000;
+	}
+	time{
+		font-size: 12px;
+		color: #555;
+		font-weight: bold;
+	}
+	time:before
+	{ 
+		content:" - ";
+	}
+	#formulario{
+		text-align: center;
+	}
+	footer{
+		text-align: center;
+		font-size: 12px;
+		margin-top: 0.2em;
+	}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<h1>ToDo List <small>Ejemplo para Mejorando.la</small></h1>
+		<div class="row">
+			<div class="span6 offset3" id="formulario">
+				<form action="javascript:void(0);" class="form-inline">
+						<fieldset>
+							<input type="text" placeholder="¿Qué tenes que hacer?">
+							<input type="button" class="btn btn-primary" value="+">
+						</fieldset>
+				</form>
+				
+			</div>
+		</div>
+		<div class="row">
+			<div class="span6 offset3" id="lista-todos">
+				<div class="alert alert-info" id="info-selecciones" style="display:none;">
+				  <strong>Tienes seleccionadas <span class="numero-de-selecciones">0</span> tarea(s)</strong> <input type="button" class="btn btn-success" id="eliminar" value="Eliminar las tareas ya completadas">
+				</div>
+			</div>
+		</div>
+		<footer>
+			<span>Ejemplo realizado por <a href="http://github.com/adrianbarabino">Adrian Barabino</a> desde lo explicado por <a href="http://twitter.com/prigazzi" target="_blank">@prigazzi</a> en la 3ra clase del<br> <a href="https://mejorando.la/cursos/frontend-online" target="_blank">Curso de Frontend Profesional en Mejorando.la</a>
+		</footer>
+	</div>
+	<script src="js/jquery.timeago.js"></script>
+	<script src="js/jquery.timeago.es.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/to-do.js"></script>
+	
+</body>
+</html>
