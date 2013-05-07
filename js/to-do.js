@@ -192,9 +192,7 @@
 	}
 	function hacer_editable (info) {
 		$(".row .span6#lista-todos label span.to_do_text").each(function (index, val) {
-						console.log("voy a imprimir algo!")
-						console.log(val);
-						console.log("Ya lo imprimi!");
+
                         $(val).editable("click", function(e){
                             imprimir_consola("Llegué");
                             if(e.old_value == e.value){

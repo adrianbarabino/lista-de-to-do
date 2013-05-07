@@ -26,13 +26,13 @@
                 }
             });
             if(posicion_en_array>=0){
-                console.log("Encontre un elemento!");
+                imprimir_consola("Encontre un elemento!");
             var old_value = todo_json[posicion_en_array].valor.replace(/^\s+/, '').replace(/\s+$/, '');
             }else{
                 
-                console.log("No encontre un elemento!");
-                console.log(id_unica);
-                console.log(posicion_en_array);
+                imprimir_consola("No encontre un elemento!");
+                imprimir_consola(id_unica);
+                imprimir_consola(posicion_en_array);
 
             var old_value =
                 target.text().replace(/^\s+/, '').replace(/\s+$/, '');
