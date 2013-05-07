@@ -4,12 +4,12 @@
 	// configuracion modo debug
 	var modo_debug = true;
 
-	if (localStorage["to_do"]) {
-	    var json_local_storage = JSON.parse(localStorage["to_do"]);
+	if (localStorage.getItem("to_do")) {
+	    var json_local_storage = JSON.parse(localStorage.getItem("to_do"));
 	    inicial = false;
 	} else {
 	    inicial = true;
-	    var json_local_storage = JSON.parse('[{"id":"id1367733341454","valor":"To-dos de prueba","tildado":false,"fecha":"2013-05-05T06:05:48.908Z","fecha_iso":"2013-05-05T06:05:48.908Z"},{"id":"id1367733346323","valor":"Puedes borrarlos seleccionÃ¡ndolos","tildado":false,"fecha":"2013-05-05T06:05:48.908Z","fecha_iso":"2013-05-05T06:05:48.908Z"},{"id":"id1367733350884","valor":"Y agregar nuevos tambiÃ©n.","tildado":false,"fecha":"2013-05-05T06:05:48.908Z","fecha_iso":"2013-05-05T06:05:48.908Z"}]');
+	    var json_local_storage = JSON.parse('[{"id":"id1367733341454","valor":"To-dos de prueba","tildado":false,"fecha":"2013-05-05T06:05:48.908Z","fecha_iso":"2013-05-05T06:05:48.908Z"},{"id":"id1367733346323","valor":"Puedes borrarlos seleccionándolos","tildado":false,"fecha":"2013-05-05T06:05:48.908Z","fecha_iso":"2013-05-05T06:05:48.908Z"},{"id":"id1367733350884","valor":"Y agregar nuevos también.","tildado":false,"fecha":"2013-05-05T06:05:48.908Z","fecha_iso":"2013-05-05T06:05:48.908Z"}]');
 	}
 	function imprimir_consola (string) {
 		if(modo_debug){
@@ -38,7 +38,7 @@
 	    imprimir_consola(todo_a_editar);
 	    
 	    if(todo_a_editar.id){
-	    	imprimir_consola("Ahora el Todo: " + todo_a_editar.valor + " estÃ¡: " + todo_a_editar.tildado);
+	    	imprimir_consola("Ahora el Todo: " + todo_a_editar.valor + " está: " + todo_a_editar.tildado);
 		    if (todo_a_editar.tildado) {
 		        todo_a_editar.tildado = false;
 		        $(".row .span6 input#" + id_unica).attr("checked", "");
