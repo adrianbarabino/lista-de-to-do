@@ -84,6 +84,7 @@
 	                numero_de_items++;
 	        }
 	    });
+	    $("#contador_elementos").html(numero_de_items);
 	    imprimir_consola("Hay "+numero_de_items+" Items");
 	}
 
