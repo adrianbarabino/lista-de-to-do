@@ -104,6 +104,7 @@
 	        });
 	        delete todo_json[posicion_en_array];
 	        $(".row .span6#lista-todos label[for='" + id_unica + "']").remove();
+	        actualizar_contador();
 	        localStorage.setItem("to_do", JSON.stringify(todo_json));
 
 	    });
