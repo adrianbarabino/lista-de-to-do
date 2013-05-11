@@ -125,9 +125,6 @@
 
 	function enviar_todo(info) {
 	    if ($("form input:first").val()) {
-	        if (json_local_storage == "") {
-	            $(".row .span6#lista-todos label").remove();
-	        }
 	        var nuevo_todo = new Object;
 	        nuevo_todo.id = 'id' + (new Date()).getTime();
 	        nuevo_todo.valor = $("form input:first").val();
